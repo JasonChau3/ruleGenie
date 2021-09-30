@@ -1,0 +1,36 @@
+<template>
+    <!-- <lightning-card>
+        <lightning-record-form
+            object-api-name={objectApiName}
+            fields={fields}
+            onsuccess={handleSuccess}>
+            
+
+        </lightning-record-form>
+     </lightning-card>  -->
+
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+    <lightning-record-edit-form object-api-name="Suggestion__c" record-id={recordId}>
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name="Name" data-my-id="idName">
+            </lightning-input-field>
+        <lightning-input-field field-name="Status__c" data-my-id="idStatus" onchange={createRuleArr}>
+            </lightning-input-field>
+        <lightning-input-field field-name="Rating__c" data-my-id="idRating" onchange={createRuleArr}>
+            </lightning-input-field>
+        <lightning-input-field field-name="Active__c" data-my-id="idActive" onchange={createRuleArr}>
+            </lightning-input-field>
+        <lightning-input-field field-name="Suggestion_Category__c" data-my-id="idSuggestion_Category" onchange={createRuleArr}>
+            </lightning-input-field>
+        <lightning-input-field field-name="Implemented Date__c" data-my-id="idImplemented_Date">
+            </lightning-input-field>
+        <lightning-input-field field-name="Suggestion_Description__c" data-my-id="idSuggestion_Description">
+            </lightning-input-field>
+        <lightning-button type="submit"
+                          name="submit"
+                          label="Create Suggestion"
+                          onclick={handleSuccess}>
+            </lightning-button>
+    </lightning-record-edit-form>
+    </div>
+</template>
